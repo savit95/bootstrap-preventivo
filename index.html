@@ -39,74 +39,91 @@
         </nav>
     </header>
 
-    <!-- MAIN - Form section -->
+    <!-- MAIN -->
     <main class="container-lg mt-3">
         <h2>Richiesta Preventivo</h2>
         <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
-        <form class="row g-3 needs-validation" novalidate>  <!-- Form for requesting a quote with Bootstrap validation -->
-            <div class="col-12 col-md-8"> <!-- Name Section-->
-                <label for="name-user" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="name-user" required>
-                <div class="valid-feedback">
-                    Looks good!                 <!-- Bootstrap Validation -->
-                </div>
-            </div>
-            <div class="col-12 col-md-8">   <!-- Surname Section-->
-                <label for="surname-user" class="form-label">Cognome</label>
-                <input type="text" class="form-control" id="surname-user" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-            <div class="col-12 col-md-8">   <!-- Email Section-->
-                <label for="email-user" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email-user" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-            <div class="col-12 col-md-8">   <!-- Work selection Section-->
-                <label for="select-work" class="form-label">Tipo di lavoro</label>
-                <select class="form-select" id="select-work" required>
-                    <option selected disabled value="">Seleziona il tipo di lavoro</option>
-                    <option value="1">Sviluppo beckend</option>
-                    <option value="2">Sviluppo frontend</option>
-                    <option value="3">Analisi progettuale</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please select a valid state.
-                </div>
-            </div>
-            <div class="col-12 col-md-8">   <!-- Textarea Section-->
-                <label for="text-area" class="form-label">Textarea con Bootstrap 5</label>
-                <textarea class="form-control" id="text-area" rows="3"></textarea>
-            </div>
-            <div class="col-12 col-md-8">   <!-- Promo code Section-->
-                <label for="promo-code" class="form-label">Codice Promozionale (opzionale)</label>
-                <input type="text" class="form-control" id="promo-code">
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-            <div>
-                <div class="form-check">    <!-- Privacy Policy Section-->
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                        Accetto la Privacy Policy
-                    </label>
-                    <div class="invalid-feedback">
-                        You must agree before submitting.
+        <div class="row">
+            <!-- Form section -->
+            <form class="col-12 col-md-8 needs-validation" novalidate>
+                <!-- Form for requesting a quote with Bootstrap validation -->
+                <div class="mb-3" > <!-- Name Section-->
+                    <label for="name-user" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="name-user" required>
+                    <div class="valid-feedback">
+                        Looks good! <!-- Bootstrap Validation -->
                     </div>
                 </div>
+                <div class="mb-3" > <!-- Surname Section-->
+                    <label for="surname-user" class="form-label">Cognome</label>
+                    <input type="text" class="form-control" id="surname-user" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3"> <!-- Email Section-->
+                    <label for="email-user" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email-user" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3"> <!-- Work selection Section-->
+                    <label for="select-work" class="form-label">Tipo di lavoro</label>
+                    <select class="form-select" id="select-work" required>
+                        <option selected disabled value="">Seleziona il tipo di lavoro</option>
+                        <option value="1">Sviluppo beckend</option>
+                        <option value="2">Sviluppo frontend</option>
+                        <option value="3">Analisi progettuale</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
+                </div>
+                <div class="mb-3"> <!-- Textarea Section-->
+                    <label for="text-area" class="form-label">Textarea con Bootstrap 5</label>
+                    <textarea class="form-control" id="text-area" rows="3"></textarea>
+                </div>
+                <div class="mb-3"> <!-- Promo code Section-->
+                    <label for="promo-code" class="form-label">Codice Promozionale (opzionale)</label>
+                    <input type="text" class="form-control" id="promo-code">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-check"> <!-- Privacy Policy Section-->
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Accetto la Privacy Policy
+                        </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 text-center"> <!-- Submit bottom Section-->
+                    <button class="btn btn-primary" type="submit">Calcola Preventivo</button>
+                </div>
+                <div class="col-12 col-md-4 text-center "> <!-- Quote result-->
+                    <h5>Prezzo finale</h5>
+                    <p>---,--</p>
+                </div>
+            </form>
+
+            <!-- Card -->
+
+            <div class="col-12 col-md-4 ">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://placehold.co/300x200" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">I nostri contatti</h5>
+                        <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
+                    </div>
+                    
+                </div>
             </div>
-            <div class="col-12 col-md-4 text-center">   <!-- Submit bottom Section-->
-                <button class="btn btn-primary" type="submit">Calcola Preventivo</button>
-            </div>
-            <div class="col-12 col-md-4 text-center ">  <!-- Quote result-->
-                <h5>Prezzo finale</h5>
-                <p>---,--</p>
-            </div>
-        </form>
+        </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
