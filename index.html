@@ -47,14 +47,14 @@
             <!-- Form section -->
             <form class="col-12 col-md-8 needs-validation" novalidate>
                 <!-- Form for requesting a quote with Bootstrap validation -->
-                <div class="mb-3" > <!-- Name Section-->
+                <div class="mb-3"> <!-- Name Section-->
                     <label for="name-user" class="form-label">Nome</label>
                     <input type="text" class="form-control" id="name-user" required>
                     <div class="valid-feedback">
                         Looks good! <!-- Bootstrap Validation -->
                     </div>
                 </div>
-                <div class="mb-3" > <!-- Surname Section-->
+                <div class="mb-3"> <!-- Surname Section-->
                     <label for="surname-user" class="form-label">Cognome</label>
                     <input type="text" class="form-control" id="surname-user" required>
                     <div class="valid-feedback">
@@ -103,26 +103,31 @@
                     </div>
                 </div>
                 <div class="row text-center my-5">
-                <div class="col-12 col-md-6 text-center"> <!-- Submit bottom Section-->
-                    <button class="btn btn-primary" type="submit">Calcola Preventivo</button>
-                </div>
-                <div class="col-12 col-md-6 text-center "> <!-- Quote result-->
-                    <h5>Prezzo finale</h5>
-                    <p>---,--</p>
-                </div>
+                    <div class="col-12 col-md-6 text-center"> <!-- Submit button Section-->
+                        <button class="btn btn-primary" type="submit">Calcola Preventivo</button>
+                    </div>
+                    <div class="col-12 col-md-6 text-center "> <!-- Quote result-->
+                        <h5>Prezzo finale</h5>
+                        <p>---,--</p>
+                    </div>
                 </div>
             </form>
 
             <!-- Card -->
-
             <div class="col-12 col-md-4 ">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="https://placehold.co/300x200" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">I nostri contatti</h5>
                         <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
                     </div>
-                    
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">help@boolfactory.test</li>
+                        <li class="list-group-item">+1122334455</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Help desk</a>
+                    </div>
                 </div>
             </div>
         </div>
