@@ -9,7 +9,7 @@
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 </head>
 
-<body class="d-flex flex-column min-vh-100">    <!-- class to keep the footer at the bottom -->
+<body class="d-flex flex-column min-vh-100"> <!-- class to keep the footer at the bottom -->
     <!-- NAVBAR -->
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
@@ -42,7 +42,7 @@
     <main class="container-lg mt-3">
         <div class="row">
             <!-- Form section -->
-            <form class="col-12 col-md-8 needs-validation" novalidate>
+            <form id="form" class="col-12 col-md-8 needs-validation" novalidate>
                 <div> <!-- Description section -->
                     <h2>Richiesta Preventivo</h2>
                     <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
@@ -142,6 +142,26 @@
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script>
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
 </body>
 
 </html>
