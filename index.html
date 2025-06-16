@@ -43,6 +43,27 @@
                     <div class="col-12 col-md-8">
                         <h2>Richiesta Preventivo</h2>
                         <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo</p>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="surname" class="form-label">Cognome</label>
+                            <input type="text" class="form-control" id="surname" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="select-work" class="form-label">Tipo di lavoro</label>
+                            <select id="select-work" class="form-select" aria-label="Default select example" required>
+                                <option selected disabled value="">Seleziona il tipo di lavoro</option>
+                                <option value="1">Sviluppo beckend</option>
+                                <option value="2">Sviluppo frontend</option>
+                                <option value="3">Analisi progettuale</option>
+                            </select>
+                        </div>
                     </div>
 
                     <!-- card -->
