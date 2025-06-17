@@ -34,7 +34,19 @@ form.addEventListener("submit", function (event) {
     let resultCalculateWorkCost = calculateWorkCost(work, hour);
     console.log(resultCalculateWorkCost);
 
-    // promo code
+    // Check if the entered promo code is valid
+    // If valid, apply a 25% discount to the total cost and display a green success message
+    // If not valid, display a regular message indicating no discount applied
+    if (promoCollection.includes(promo)) {
+        resultCalculateWorkCost -= (resultCalculateWorkCost * 0.25);
+        document.getElementById("error-message").innerHTML = "il prezzo finale é calcolato con codice promo.";
+        // green
+        document.getElementById("error-message").style.color = 'green';
+    } else {
+        document.getElementById("error-message").innerHTML = "il prezzo finale é calcolato senza codice promo.";
+        // document.getElementById("error-message").style.display = 'block';
+        document.getElementById("error-message").style.color = 'black';
+    }
 
     //printed price
 
