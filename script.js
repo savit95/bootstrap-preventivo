@@ -10,4 +10,14 @@ const promoCollection = ['YHDNU32', 'JANJC63', 'PWKCN25', 'SJDPO96', 'POCIE24'];
 console.log(hour);
 console.log(promoCollection);
 
+form.addEventListener("submit", function(event){
+event.preventDefault();
+
+const work = selectWork.value;
+const promo = promoCode.value;
+console.log(work);
+console.log(promo);
+
+
+});
 
