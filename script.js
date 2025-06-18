@@ -22,6 +22,7 @@ function calculateWorkCost(work, hour) {
     }
 }
 
+
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -44,11 +45,16 @@ form.addEventListener("submit", function (event) {
         document.getElementById("error-message").style.color = 'green';
     } else {
         document.getElementById("error-message").innerHTML = "il prezzo finale é calcolato senza codice promo.";
-        // document.getElementById("error-message").style.display = 'block';
         document.getElementById("error-message").style.color = 'black';
     }
 
     //printed price
+    console.log(resultCalculateWorkCost);
+    let fixedRate = resultCalculateWorkCost.toFixed(2);
+    console.log(fixedRate);
+    let result = fixedRate.split(".");
+    document.getElementById("integer-part").innerHTML = `€ ${result[0]}`;
+    document.getElementById("decimal-part").innerHTML = `,${result[1]} `;
 
 
 });
