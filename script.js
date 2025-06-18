@@ -23,6 +23,15 @@ function calculateWorkCost(work, hour) {
 }
 
 
+// Formatting and displaying work cost with Euro currency and decimal separation
+function finalPrice(resultCalculateWorkCost) {
+    let fixedRate = resultCalculateWorkCost.toFixed(2);
+    let result = fixedRate.split(".");
+    document.getElementById("integer-part").innerHTML = `€ ${result[0]}`;
+    document.getElementById("decimal-part").innerHTML = `,${result[1]} `;
+}
+
+
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -41,20 +50,15 @@ form.addEventListener("submit", function (event) {
     if (promoCollection.includes(promo)) {
         resultCalculateWorkCost -= (resultCalculateWorkCost * 0.25);
         document.getElementById("error-message").innerHTML = "il prezzo finale é calcolato con codice promo.";
-        // green
         document.getElementById("error-message").style.color = 'green';
     } else {
         document.getElementById("error-message").innerHTML = "il prezzo finale é calcolato senza codice promo.";
         document.getElementById("error-message").style.color = 'black';
     }
 
-    //printed price
-    console.log(resultCalculateWorkCost);
-    let fixedRate = resultCalculateWorkCost.toFixed(2);
-    console.log(fixedRate);
-    let result = fixedRate.split(".");
-    document.getElementById("integer-part").innerHTML = `€ ${result[0]}`;
-    document.getElementById("decimal-part").innerHTML = `,${result[1]} `;
+    //Calls the function to Formatting and displaying work cost
+    finalPrice(resultCalculateWorkCost);
+   
 
 
 });
